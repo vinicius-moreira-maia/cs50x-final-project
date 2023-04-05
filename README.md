@@ -1,5 +1,4 @@
--> **ENGLISH / INGLÊS:** This application will soon be deployed and this file will be translated to portuguese.
--> **PORTUGUESE / PORTUGUÊS:** Em breve será realizado o deploy desta aplicação e este arquivo será traduzido para o português.
+-> **ENGLISH / INGLÊS:** This application will soon be deployed and this file will be translated to portuguese. / **PORTUGUESE / PORTUGUÊS:** Em breve será realizado o deploy desta aplicação e este arquivo será traduzido para o português.
 
 # FINANCE
 
