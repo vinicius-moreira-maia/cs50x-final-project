@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+               <th>Symbol</th>
+               <th>Name</th>
+               <th>Shares</th>
+               <th>Price</th>
+               <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set ns = namespace(c = 0) %}
+            {% for line in transactions_list %}
+            <tr>
+                <td>{{ line['symbol'] }}</td>
+                <td>{{ current[ns.c]['name'] }}</td>
+                <td>{{ line['shares'] }}</td>
+                <td>{{ current[ns.c]['actual_price'] }}</td>
+                <td>{{ current[ns.c]['total'] }}</td>
+                {% set ns.c = ns.c + 1 %}
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>Cash</th>
+                <th>{{ cash }}</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th>TOTAL</th>
+                <th>{{ grand_total }}</th>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}
